@@ -1,0 +1,7 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+mysql
+mysqld
+*.tar.gz
+wordpress/

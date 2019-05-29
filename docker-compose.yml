@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+# Ref.: https://hub.docker.com/_/mysql/
+  mysql:
+    container_name: mysql5.7
+    image: mysql:5.7
+    ports:
+      - "4407:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./mysqld:/run/mysqld
+
+  php7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php7
+    image: php:php7-apache
+    ports:
+      - "8000:80"
+    volumes:
+      - ./wordpress:/var/www/html
+    depends_on:
+      - mysql
