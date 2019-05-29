@@ -1,12 +1,20 @@
 # docker-wordpress-dev
 Docker environment for Wordpress development
 
+# Requirements
+
+1- Install git : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+2- Install Docker: https://docs.docker.com/install/
+
+3- Install Docker-compose: https://docs.docker.com/compose/install/
+
 # Steps to follow
 
 1- Clone this repository
 
 ```bash
-    $ git clone 
+    $ git clone git@github.com:sys0dm1n/docker-wordpress-dev.git
     $ cd docker-wordpress-dev
 ```
 
